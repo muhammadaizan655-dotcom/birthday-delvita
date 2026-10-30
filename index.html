@@ -1,0 +1,845 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Delvita Sari 💗</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#ffd1e5,#ff8fbd,#ffc1dc);
+    color: #a51d61;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating {
+    position: absolute;
+    bottom: -50px;
+    animation: floatUp linear infinite;
+    opacity: .8;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0); opacity: 0; }
+    20% { opacity: 1; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+button {
+    padding: 14px 27px;
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    background: linear-gradient(45deg,#ff1680,#e754a5);
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 18px #c2185b50;
+    transition: .3s;
+    margin-top: 15px;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+/* HALAMAN LILIN */
+
+.candle-page {
+    width: 100%;
+    max-width: 650px;
+    padding: 35px 20px;
+    text-align: center;
+    background: linear-gradient(145deg,#fff0f7,#ffb6d5);
+    border: 3px solid white;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px #c2185b50;
+    animation: appear 1s ease;
+}
+
+.candle-page h1 {
+    color: #e60073;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.candle-page p {
+    line-height: 1.8;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* AREA KUE */
+
+.cake-scene {
+    position: relative;
+    width: 340px;
+    height: 310px;
+    margin: 35px auto 15px;
+    animation: cakeFloat 3s ease-in-out infinite;
+}
+
+@keyframes cakeFloat {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* BAYANGAN */
+
+.cake-shadow {
+    position: absolute;
+    width: 290px;
+    height: 25px;
+    bottom: 3px;
+    left: 25px;
+    background: #a83d6650;
+    border-radius: 50%;
+    filter: blur(8px);
+}
+
+/* ALAS KUE */
+
+.cake-board {
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
+    width: 310px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(180deg,#fff9f0,#e8b7cb,#fff);
+    border: 3px solid white;
+    box-shadow: 0 5px 12px #a83d6650;
+    z-index: 2;
+}
+
+/* BADAN KUE */
+
+.cake-body {
+    position: absolute;
+    bottom: 37px;
+    left: 48px;
+    width: 244px;
+    height: 112px;
+    background: linear-gradient(
+        90deg,
+        #e96c9e,
+        #ffb9d5 20%,
+        #ffd3e5 50%,
+        #ff9fc5 80%,
+        #e96c9e
+    );
+    border-radius: 12px 12px 20px 20px;
+    border: 2px solid #f47eac;
+    box-shadow:
+        inset 8px 0 12px #fff5,
+        inset -8px 0 12px #b7357050,
+        0 8px 10px #a83d6640;
+    z-index: 3;
+}
+
+/* GARIS KRIM PADA KUE */
+
+.cake-body::before {
+    content: "";
+    position: absolute;
+    top: 29px;
+    width: 100%;
+    height: 13px;
+    background: linear-gradient(#fff0f7,#ff9fc5);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #b34b7840;
+}
+
+/* PITA */
+
+.cake-ribbon {
+    position: absolute;
+    top: 53px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 43px;
+    filter: drop-shadow(0 3px 3px #a83d6650);
+    z-index: 5;
+}
+
+/* LAPISAN KRIM ATAS */
+
+.cake-frosting {
+    position: absolute;
+    top: 126px;
+    left: 39px;
+    width: 262px;
+    height: 62px;
+    background: radial-gradient(
+        ellipse at 40% 25%,
+        #fff,
+        #ffe6f0 45%,
+        #ffafd0
+    );
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow:
+        inset 0 5px 10px #fff,
+        0 5px 10px #d65a9050;
+    z-index: 4;
+}
+
+/* LELEHAN KRIM */
+
+.drip {
+    position: absolute;
+    top: 34px;
+    left: 12px;
+    width: 30px;
+    height: 25px;
+    background: #fff0f7;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 43px 2px 0 #fff0f7,
+                91px -2px 0 #fff0f7,
+                143px 3px 0 #fff0f7,
+                194px -1px 0 #fff0f7;
+}
+
+/* HIASAN BUNGA DAN STROBERI */
+
+.toppings {
+    position: absolute;
+    top: 133px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 2px;
+    z-index: 6;
+}
+
+/* KRIM KECIL */
+
+.cream-dots {
+    position: absolute;
+    top: 192px;
+    left: 55px;
+    width: 230px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 5;
+}
+
+.cream-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%,white,#ff91bd);
+    box-shadow: 0 2px 4px #bd4b7b50;
+}
+
+/* LILIN ANGKA 20 */
+
+.candles {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    z-index: 8;
+}
+
+.number-candle {
+    position: relative;
+    font-family: Georgia,serif;
+    font-size: 90px;
+    line-height: 1;
+    font-weight: bold;
+    background: linear-gradient(
+        90deg,#d92775,#ff8bb9,#e72b79
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    filter: drop-shadow(3px 4px 2px #a83d6660);
+}
+
+/* API LILIN */
+
+.flame {
+    position: absolute;
+    top: -31px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 30px;
+    background: linear-gradient(
+        to top,#ff4b00,#ffae22,#fff9b0
+    );
+    border-radius: 50% 50% 45% 45%;
+    box-shadow:
+        0 0 12px #ffcf42,
+        0 0 25px #ff9d00;
+    animation: flicker .5s infinite alternate;
+    transform-origin: bottom;
+}
+
+.flame::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 17px;
+    background: white;
+    border-radius: 50%;
+    top: 7px;
+    left: 5px;
+}
+
+@keyframes flicker {
+    from { transform: translateX(-50%) rotate(-5deg) scale(1); }
+    to { transform: translateX(-50%) rotate(5deg) scale(.85); }
+}
+
+.flame.off {
+    display: none;
+}
+
+/* ASAP */
+
+.smoke {
+    display: none;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    color: #aaa;
+    font-size: 28px;
+    animation: smoke 2s forwards;
+}
+
+@keyframes smoke {
+    from { opacity: 1; transform: translate(-50%,0); }
+    to { opacity: 0; transform: translate(-50%,-65px); }
+}
+
+/* KILAU */
+
+.sparkle {
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    animation: sparkle 1.5s infinite alternate;
+}
+
+.s1 { top: 80px; left: 10px; }
+.s2 { top: 130px; right: 8px; }
+.s3 { top: 220px; left: 0; }
+.s4 { top: 40px; right: 15px; }
+
+@keyframes sparkle {
+    from { opacity: .3; transform: scale(.7) rotate(0); }
+    to { opacity: 1; transform: scale(1.3) rotate(30deg); }
+}
+
+/* UCAPAN */
+
+.wish {
+    display: none;
+    margin: 25px auto 0;
+    padding: 25px 15px;
+    background: white;
+    border: 2px solid #ff8fbd;
+    border-radius: 20px;
+    color: #d63384;
+    line-height: 1.8;
+    animation: appear 1s ease;
+}
+
+.wish h2 {
+    margin-bottom: 15px;
+}
+
+/* SURAT */
+
+.letter {
+    display: none;
+    width: 100%;
+    max-width: 750px;
+    padding: 35px;
+    margin: 20px 0;
+    border: 4px double #ff69a6;
+    border-radius: 25px;
+    background: linear-gradient(145deg,#fff0f7,#ffd5e8);
+    box-shadow: 0 10px 40px #c2185b50;
+    animation: appear 1s ease;
+}
+
+.letter h1 {
+    text-align: center;
+    color: #e60073;
+    font-size: 34px;
+}
+
+.subtitle {
+    text-align: center;
+    font-style: italic;
+    margin: 15px 0 25px;
+}
+
+.decoration {
+    text-align: center;
+    font-size: 55px;
+    margin: 15px;
+}
+
+.message {
+    line-height: 2;
+    text-align: justify;
+    font-size: 16px;
+    color: #8e2454;
+}
+
+.message p {
+    margin-bottom: 18px;
+}
+
+.special {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.8;
+    color: #e60073;
+    margin: 30px 0;
+}
+
+.signature {
+    text-align: right;
+    font-size: 21px;
+    font-style: italic;
+    margin-top: 30px;
+    color: #d63384;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #d63384;
+}
+
+@media(max-width:500px) {
+    .candle-page h1 { font-size: 25px; }
+    .letter { padding: 25px 18px; }
+    .letter h1 { font-size: 27px; }
+    .message { font-size: 15px; }
+
+    .cake-scene {
+        transform: scale(.88);
+        transform-origin: top center;
+        margin-bottom: -20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background" id="background"></div>
+
+<div class="container">
+
+<!-- HALAMAN PERTAMA: KUE ULANG TAHUN -->
+
+<div class="candle-page" id="candlePage">
+
+    <div style="font-size:40px;margin-bottom:10px">
+        🎀💗🌷
+    </div>
+
+    <h1>HAPPY 20TH BIRTHDAY!</h1>
+
+    <h2 style="color:#d63384;margin-bottom:15px">
+        DELVITA SARI ❤️
+    </h2>
+
+    <p>
+        Hari ini adalah hari spesial seseorang
+        yang sangat berarti dalam hidupku.
+        <br>
+        Sekarang saatnya sayang membuat permohonan!
+    </p>
+
+    <!-- ANIMASI KUE -->
+
+    <div class="cake-scene">
+
+        <span class="sparkle s1">✦</span>
+        <span class="sparkle s2">✧</span>
+        <span class="sparkle s3">✦</span>
+        <span class="sparkle s4">✧</span>
+
+        <!-- LILIN 20 -->
+
+        <div class="candles">
+
+            <div class="number-candle">
+                <span class="flame"></span>
+                2
+                <span class="smoke">〰</span>
+            </div>
+
+            <div class="number-candle">
+                <span class="flame"></span>
+                0
+                <span class="smoke">〰</span>
+            </div>
+
+        </div>
+
+        <!-- BADAN KUE -->
+
+        <div class="cake-body">
+            <div class="cake-ribbon">🎀</div>
+        </div>
+
+        <!-- KRIM ATAS -->
+
+        <div class="cake-frosting">
+            <div class="drip"></div>
+        </div>
+
+        <!-- TOPPING -->
+
+        <div class="toppings">
+            🍓 🌸 🍓 🌸 🍓
+        </div>
+
+        <div class="cream-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- ALAS -->
+
+        <div class="cake-base"></div>
+        <div class="cake-shadow"></div>
+
+    </div>
+
+    <p id="instruction" style="margin:15px 0">
+        🎂 Dua puluh tahun yang penuh cerita.
+        <br>
+        Yuk, tiup lilinnya sayang!
+    </p>
+
+    <button id="blowButton" onclick="tiupLilin()">
+        🌬️ TIUP LILIN SEKARANG!
+    </button>
+
+    <!-- UCAPAN SETELAH TIUP LILIN -->
+
+    <div class="wish" id="wish">
+
+        <h2>YEEEEAY! 💗🎉</h2>
+
+        <h3>HAPPY 20TH BIRTHDAY!</h3>
+
+        <p>
+            Selamat datang di usia yang ke-20,
+            sayangku Delvita Sari.
+        </p>
+
+        <p>
+            Semoga semua doa dan harapan sayang
+            dikabulkan oleh Tuhan.
+        </p>
+
+        <p>
+            Semoga langkah sayang selalu dimudahkan,
+            kebahagiaan selalu menyertai,
+            dan hal-hal baik selalu datang.
+        </p>
+
+        <h2 style="margin:20px 0">
+            I LOVE YOU, DELVITA! ❤️
+        </h2>
+
+        <p>
+            Masih ada satu hadiah kecil lagi
+            yang ingin aku berikan untuk sayang.
+        </p>
+
+        <button onclick="bukaSurat()">
+            💌 BUKA SURAT DARI AIZAN
+        </button>
+
+    </div>
+
+    <div class="footer">
+        Made with all my love 💕
+    </div>
+
+</div>
+
+
+<!-- HALAMAN SURAT -->
+
+<div class="letter" id="letter">
+
+    <div class="decoration">🎀🌷💗</div>
+
+    <h1>HAPPY BIRTHDAY!</h1>
+
+    <div class="subtitle">
+        To My Special Girl, Delvita Sari ❤️
+    </div>
+
+    <div class="message">
+
+        <p>
+            <b>
+            HAPPY BIRTHDAY SAYAAAANGKUUUU DELVITA SARI!
+            </b> ❤️
+        </p>
+
+        <p>
+            Semoga dengan bertambahnya umur sayang pada hari ini,
+            bertambah juga hal-hal baik dalam hidup sayang serta
+            bertambah juga pencapaian-pencapaian sayang di umur
+            sayang yang ke-20 ini.
+        </p>
+
+        <p>
+            Tetap menjadi Delvita yang aku kenal ya sayangku.
+            Semoga hidup sayang selalu dikelilingi orang-orang
+            yang baik. Doa terbaik untuk sayang. Aku akan selalu
+            support sayang dalam hal-hal kebaikan.
+        </p>
+
+        <p>
+            Dan di momen ini juga aku mau mengucapkan beribu-ribu
+            terima kasih karena sayang selalu ada di samping aku.
+            Aku belajar banyak dari sayang.
+            <b>LOVE YOU DELVITA!</b> ❤️
+        </p>
+
+        <p>
+            Di sini aku juga mau minta maaf sama sayang.
+            Mungkin selama ini aku banyak sekali bikin sayang
+            sakit hati ataupun kecewa sama aku karena perilaku
+            aku yang belum bisa menjadi sempurna.
+        </p>
+
+        <p>
+            Masih banyak sekali kesalahan-kesalahan yang sama
+            yang aku lakukan. Tapi apa pun itu, aku janji sayang,
+            aku akan berubah untuk sayang.
+        </p>
+
+    </div>
+
+    <div class="special">
+        "STAY BY MY SIDE, MY LOVE.
+        <br>
+        I HAVE SUCH HIGH HOPES FOR US." 💗
+    </div>
+
+    <div class="message">
+
+        <p>
+            Sekali lagi selamat ulang tahun sayangku
+            Delvita Sari. Semoga semua hal yang sedang
+            sayang perjuangkan bisa tercapai satu per satu.
+            Jangan pernah berhenti menjadi pribadi yang hebat.
+        </p>
+
+        <p>
+            Terima kasih sudah hadir dan menjadi bagian dari
+            cerita hidup aku. Semoga kita bisa terus tumbuh,
+            belajar, dan saling mendukung dalam setiap perjalanan.
+        </p>
+
+    </div>
+
+    <div class="signature">
+        With Love,
+        <br>
+        M. Aizan ❤️
+    </div>
+
+    <div class="footer">
+
+        🌷 HAPPY 20TH BIRTHDAY, DELVITA! 🌷
+
+        <br><br>
+
+        <h2>FOREVER WITH LOVE 💗</h2>
+
+        <button onclick="location.reload()">
+            💕 KEMBALI KE AWAL
+        </button>
+
+    </div>
+
+</div>
+
+</div>
+
+<script>
+
+// ANIMASI HATI DAN BUNGA
+
+function buatHati() {
+
+    const background = document.getElementById("background");
+
+    setInterval(() => {
+
+        const item = document.createElement("div");
+
+        item.className = "floating";
+
+        const simbol = ["💗","💕","💖","🌸","🌷","🎀"];
+
+        item.innerHTML =
+            simbol[Math.floor(Math.random() * simbol.length)];
+
+        item.style.left = Math.random() * 100 + "%";
+
+        item.style.fontSize =
+            (15 + Math.random() * 20) + "px";
+
+        item.style.animationDuration =
+            (5 + Math.random() * 5) + "s";
+
+        background.appendChild(item);
+
+        setTimeout(() => item.remove(),10000);
+
+    },400);
+
+}
+
+
+// TIUP LILIN
+
+function tiupLilin() {
+
+    const flames = document.querySelectorAll(".flame");
+    const smokes = document.querySelectorAll(".smoke");
+
+    // Mematikan api
+
+    flames.forEach(flame => {
+        flame.classList.add("off");
+    });
+
+    // Menampilkan asap
+
+    smokes.forEach(smoke => {
+        smoke.style.display = "block";
+    });
+
+    document.getElementById("instruction").innerHTML =
+        "YAY! Lilinnya sudah padam! 💗";
+
+    document.getElementById("blowButton").style.display =
+        "none";
+
+    document.getElementById("wish").style.display =
+        "block";
+
+    // HUJAN HATI
+
+    for (let i = 0; i < 45; i++) {
+
+        setTimeout(() => {
+
+            const heart = document.createElement("div");
+
+            const simbol = ["💗","💕","💖","🌸"];
+
+            heart.innerHTML =
+                simbol[Math.floor(Math.random() * simbol.length)];
+
+            heart.style.position = "fixed";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.top = "-30px";
+            heart.style.fontSize = "25px";
+            heart.style.zIndex = "10";
+            heart.style.pointerEvents = "none";
+            heart.style.transition = "top 3s linear, opacity 3s";
+
+            document.body.appendChild(heart);
+
+            requestAnimationFrame(() => {
+                heart.style.top = "100vh";
+                heart.style.opacity = "0";
+            });
+
+            setTimeout(() => heart.remove(),3500);
+
+        },i * 100);
+
+    }
+
+}
+
+
+// BUKA SURAT
+
+function bukaSurat() {
+
+    document.getElementById("candlePage").style.display =
+        "none";
+
+    document.getElementById("letter").style.display =
+        "block";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+// JALANKAN ANIMASI
+
+buatHati();
+
+</script>
+
+</body>
+</html>
